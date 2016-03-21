@@ -158,25 +158,27 @@
                         <div class="features-tab">
                             
 <div class="row">
+
                             <!-- Tab panes -->
                             <div class="tab-content">
                  <!--==============================Clothing=============================-->
                                 <div role="tabpanel" class="tab-pane fade in active" id="clothing32">
                                 <div class="row row-margin2">
                                     <div class="feature-carousel-tab">
+
                                             <!-- single-product start -->
-                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd">
+                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd"  ng-repeat="product in data.products_list">
                                                 <div class="single-product">
                                                     <div class="product-label">
                                                     <div class="new"></div>
                                                     </div>
                                                     <div class="product-img">
                                                         <a href="#">
-                                                            <img class="primary-image" src="assets/img/product/books1.jpg" alt="" />
+                                                            <img class="primary-image" src="http://localhost/API-shop/img/{{product.product_image}}" alt="" />
                                                         </a>
                                                     </div>
                                                     <div class="product-content common3">
-                                                        <h2 class="product-name"><a href="#">Donec ac tempus</a></h2>
+                                                        <h2 class="product-name"><a href="#">{{product.product_title}}</a></h2>
                                                         <div class="rating">
                                                             <a href="#"><i class="fa fa-star"></i></a>
                                                             <a href="#"><i class="fa fa-star"></i></a>

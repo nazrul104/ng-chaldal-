@@ -31,10 +31,11 @@
       vm.classAnimation = '';
     }
 
-    if ($stateParams.cid) {
-      $http.get(datasource+'?f=5')
+    if ($stateParams.cid)
+     {
+          $http.get(datasource+'?f=6&main_category_id='+$stateParams.cid)
           .success(function(data) {
-           $scope.categories =data;  
+           $scope.data =data;  
          });
     }
   }
