@@ -2354,7 +2354,7 @@ aside {
     padding: 5px 10px 7px 18px;
 }
 .home-3-wraper .product-content.common3 {
-    margin-top: -40px;
+   /* margin-top: -40px;*/
 }
 .add-to-link3 ul li.add-link3 {
     padding-left: 27px;
@@ -4168,4 +4168,15 @@ form textarea:focus {
 }
 .mobile-menu-area {
     display: none
+}
+/*custom css*/
+.left-category-menu {
+    position: fixed;
+    left: 0;
+    padding-left: 0;
+    width: 250px;
+}
+
+.home-3-wraper aside{
+    margin-top: 0px;
 }

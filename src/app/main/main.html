@@ -8,150 +8,76 @@
 <!-- creative banner area end -->
    
 <!-- main area start -->
+<acme-navbar obj="hello"></acme-navbar>
 <div class="main-area">
     <div class="container">
 
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12 nopadding-right">
-                <aside>
-                    <div class="left-category-menu">
-                        <div class="left-product-cat">
-                            <div class="category-heading common3">
-                                <h2>category </h2>
-                            </div>
-                            <!-- category-menu-list start -->
-                            <div class="category-menu-list common3">
-                                <ul>
-                                    <li ng-repeat="item in categories">
-                                        <a href="#/search/{{item.cid}}"><span>{{item.category_name}}</span></a>
-
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <!-- category-menu-list end -->
-                        </div>
-                    </div>
-                </aside>
-                <aside>
-                    <div class="hotsell-area">
-                            <div class="area-title bdr2">
-                                <h2>hot sale !</h2>
-                            </div>
-                          <div class="total-hotsell">
-                              <div class="single-hotsell aside-padd">
-                                  <div class="hotsell-img">
-                                      <a href="#"><img src="assets/img/product/books1.jpg" alt=""></a>
-                                  </div>
-                                  <div class="hotsell-text">
-                                     <a href="">Quisque in arcu</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <span class="new-price">$222.00</span>
-                                    <a class="button shop-now mt5" href="#">Shop now !</a>
-                                  </div>
-                              </div><!--Single hotsell--> 
-                              <div class="single-hotsell aside-padd">
-                                  <div class="hotsell-img">
-                                      <a href="#"><img src="assets/img/product/books2.jpg" alt=""></a>
-                                  </div>
-                                  <div class="hotsell-text">
-                                     <a href="">Quisque in arcu</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <span class="new-price">$222.00</span>
-                                    <a class="button shop-now mt5" href="#">Shop now !</a>
-                                  </div>
-                              </div><!--Single hotsell--> 
-                              <div class="single-hotsell aside-padd">
-                                  <div class="hotsell-img">
-                                      <a href="#"><img src="assets/img/product/product-1.jpg" alt=""></a>
-                                  </div>
-                                  <div class="hotsell-text">
-                                     <a href="">Quisque in arcu</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <span class="new-price">$222.00</span>
-                                    <a class="button shop-now mt5" href="#">Shop now !</a>
-                                  </div>
-                              </div><!--Single hotsell--> 
-                              <div class="single-hotsell aside-padd">
-                                  <div class="hotsell-img">
-                                      <a href="#"><img src="assets/img/product/product-3.jpg" alt=""></a>
-                                  </div>
-                                  <div class="hotsell-text">
-                                     <a href="">Quisque in arcu</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <span class="new-price">$222.00</span>
-                                    <a class="button shop-now mt5" href="#">Shop now !</a>
-                                  </div>
-
-                              </div><!--Single hotsell--> 
-                              <div class="single-hotsell aside-padd">
-                                  <div class="hotsell-img">
-                                      <a href="#"><img src="assets/img/product/books3.jpg" alt=""></a>
-                                  </div>
-                                  <div class="hotsell-text">
-                                     <a href="">Quisque in arcu</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <span class="new-price">$222.00</span>
-                                    <a class="button shop-now mt5" href="#">Shop now !</a>
-                                  </div>
-                              </div><!--Single hotsell--> 
-                          </div> <!--total hotsell--> 
-                    </div>
-                </aside>
-                <aside>
-                    <div class="banner-left">
-                     <h2>Get a New Tables !</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                        <a href="#"><img alt="" src="assets/img/bg-mobile.png"></a>
-                    </div>
-                </aside>
             </div>
             <!--col-md-3-->
 
-            <div class="col-md-9 col-sm-9 col-xs-12 nopadding-left">
+            <div class="col-md-12 col-sm-12 col-xs-12 nopadding-left">
                 <div class="ambit-key">
                     <!-- product section start -->
-                    <div class="our-product-area top-pd featur-padd">
-                 
-           
+                    <div class="our-product-area top-pd featur-padd" ng-if="searcheddata">         
+                        <!--====== best offered area start===== -->
+                    <div class="our-product-area best-offere featur-padd mt25">
+                        <!-- area title start -->
+                        <div class="area-title bdr2">
+                            <h2>Looking for: <strong>{{lookingfor}}</strong> items </h2>
+                        </div>
+                        <!-- area title end -->
+                        <!-- our-product area start -->
+                        <div class="features-tab">
+                            
+                        <div class="row">
 
-                  
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                 <!--==============================Clothing=============================-->
+                                <div role="tabpanel" class="tab-pane fade in active" id="clothing32">
+                                <div class="row row-margin2">
+                                    <div class="feature-carousel-tab">
+                                  
+                                            <!-- single-product start -->
+                                            <product-list obj="selectedCategory"></product-list>
 
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    <!-- best offered area end-->
+                    <div class="featur-padd mt30">
+                        <div class="banner-content-area">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="box-title banner-box">
+                                    <h2>The New Laptop Z-0675</h2>
+                                    <p>Full wide screen with retina display 23', now ready !</p>
+                                    <a class="button shop-now" href="#">Shop now !</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <img src="assets/img/bg-home3-content2.png" alt="">
+                            </div>
+</div>
+                     </div>
+
+
+                    <!--brand crasoule-area-end-->
+                </div>
+                <!--ambit-key-->
+            </div>
+            <!--col-md-9-->
+        </div>
+
+        <!--row-->
+    </div>
                     <!--====== best offered area start===== -->
                     <div class="our-product-area best-offere featur-padd mt25">
                         <!-- area title start -->
                         <div class="area-title bdr2">
-                            <h2>Recently View</h2>
+                            <h2>Available Products</h2>
                         </div>
                         <!-- area title end -->
                         <!-- our-product area start -->
@@ -174,7 +100,7 @@
                                                     </div>
                                                     <div class="product-img">
                                                         <a href="#">
-                                                            <img class="primary-image" src="http://localhost/API-shop/img/{{product.product_image}}" alt="" />
+                                                            <img class="primary-image" src="http://localhost/API-shop/img/{{product.product_image}}" alt="" style="width:250px;height: 150px " />
                                                         </a>
                                                     </div>
                                                     <div class="product-content common3">
@@ -201,111 +127,9 @@
                                                 </div>
                                             </div>
                                             <!-- single-product end -->
-                                            <!-- single-product start -->
-                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd">
-                                                <div class="single-product">
-                                                    <div class="product-label">
-                                                    <div class="sale"></div>
-                                                    </div>
-                                                    <div class="product-img">
-                                                        <a href="#">
-                                                            <img class="primary-image" src="assets/img/product/books2.jpg" alt="" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content common3">
-                                                        <h2 class="product-name"><a href="#">Donec ac tempus</a></h2>
-                                                        <div class="rating">
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star-o"></i></a>
-                                                        </div>
-                                                        <div class="price-box">
-                                                            <span class="new-price">$222.00</span>
-                                                            <span class="old-rpice"><del>$250.00</del></span>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="add-to-link3">
-                                                        <ul>
-                                                            <li class="add-link3"><a href="#" title="" data-original-title="Add to Cart">add to cart</a></li>
-                                                            <li class="add-heart"><a href="#" title="" data-original-title="Add to Wishlist"></a></li>
-                                                            <li class="add-arrow"><a href="#" title="" data-original-title="View Products"></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                
                                             <!-- single-product end -->
-                                            <!-- single-product start -->
-                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd">
-                                                <div class="single-product">
-                                                    <div class="product-label">
-                                                    <div class="new"></div>
-                                                    </div>
-                                                    <div class="product-img">
-                                                        <a href="#">
-                                                            <img class="primary-image" src="assets/img/product/books3.jpg" alt="" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content common3">
-                                                        <h2 class="product-name"><a href="#">Donec ac tempus</a></h2>
-                                                        <div class="rating">
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star-o"></i></a>
-                                                        </div>
-                                                        <div class="price-box">
-                                                            <span class="new-price">$222.00</span>
-                                                        </div>
 
-                                                    </div>
-                                                    <div class="add-to-link3">
-                                                        <ul>
-                                                            <li class="add-link3"><a href="#" title="" data-original-title="Add to Cart">add to cart</a></li>
-                                                            <li class="add-heart"><a href="#" title="" data-original-title="Add to Wishlist"></a></li>
-                                                            <li class="add-arrow"><a href="#" title="" data-original-title="View Products"></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- single-product end -->  
-                                            <!-- single-product start -->
-                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd">
-                                                <div class="single-product">
-                                                    <div class="product-label">
-                                                    <div class="new"></div>
-                                                    </div>
-                                                    <div class="product-img">
-                                                        <a href="#">
-                                                            <img class="primary-image" src="assets/img/product/books4.jpg" alt="" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content common3">
-                                                        <h2 class="product-name"><a href="#">Donec ac tempus</a></h2>
-                                                        <div class="rating">
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star"></i></a>
-                                                            <a href="#"><i class="fa fa-star-o"></i></a>
-                                                        </div>
-                                                        <div class="price-box">
-                                                            <span class="new-price">$222.00</span>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="add-to-link3">
-                                                        <ul>
-                                                            <li class="add-link3"><a href="#" title="" data-original-title="Add to Cart">add to cart</a></li>
-                                                            <li class="add-heart"><a href="#" title="" data-original-title="Add to Wishlist"></a></li>
-                                                            <li class="add-arrow"><a href="#" title="" data-original-title="View Products"></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
 
                                 <!-- product section end -->
                             </div>
@@ -335,14 +159,12 @@
             </div>
             <!--col-md-9-->
         </div>
-        <!--row-->
-    </div>
     <!--container-->
 </div>
 <!-- main area end -->
 
 <!--bottom menu warapper start-->
-<div class="sp-bottom-menu-wrapper common4 pt30 pb30">
+<!-- <div class="sp-bottom-menu-wrapper common4 pt30 pb30">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-4 col-xs-12">
@@ -423,10 +245,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--bottom menu warapper End-->
 
-<div class="footer-static-container">
+<!-- <div class="footer-static-container">
     <div class="container">
         <div class="footer-static row pt30 pb30">
             <div class="col-md-3 col-sm-4 col-xs-12">
@@ -492,8 +314,8 @@ Contact Us</a></li>
                     <div class="phone">(800) 0123 4567 890
                         <br> (800) 0987 654 321</div>
 
-                    <div class="mail"> admin@bootexparts.com
-                        <br> Support@bootexparts.com</div>
+                    <div class="mail"> info@example.com
+                        <br> Support@example.com</div>
                 </div>
             </div>
         </div>
@@ -518,9 +340,9 @@ Contact Us</a></li>
 
         </div>
     </div>
-</div>
+</div> -->
 
-<footer class="ma-footer-container">
+<!-- <footer class="ma-footer-container">
     <div class="container">
         <div class="row">
             <div class="basak-footer">
@@ -563,5 +385,5 @@ Contact Us</a></li>
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 </div>

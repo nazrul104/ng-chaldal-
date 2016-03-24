@@ -15,7 +15,7 @@
         controllerAs: 'main'
       })
       .state('search', {
-        url: '/search/:cid',
+        url: '/search/:cid/:cname',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
