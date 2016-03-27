@@ -24,15 +24,9 @@
     function NavbarController(moment,$scope,basket) {
       var vm = this;
       $scope. myname =$scope.obj;
-      $scope.cartbadge = basket.getCart();
-
-
-
       // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
     }
-
-    
   }
 
 })();

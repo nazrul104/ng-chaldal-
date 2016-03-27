@@ -45,6 +45,6 @@
       $scope.selectedCategory = {"cid":$stateParams.cid,"category_name":$stateParams.cname};
     }
 
-    $scope.cart_total =  basket.getCart();
+    $scope.cart_total =  10;
   }
 })();
