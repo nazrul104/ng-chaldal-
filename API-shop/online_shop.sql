@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
+<<<<<<< HEAD
+-- Generation Time: Mar 31, 2016 at 05:31 PM
+=======
 -- Generation Time: Mar 21, 2016 at 03:45 PM
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -49,6 +53,29 @@ INSERT INTO `main_category` (`id`, `category_name`, `created_date`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `_oid` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `total_amount` float NOT NULL,
+  `discount_amount` float NOT NULL,
+  `grand_total` float NOT NULL,
+  `payment_type` tinyint(4) NOT NULL,
+  `payment_status` tinyint(4) NOT NULL,
+  `special_instruction` varchar(256) NOT NULL,
+  `delivery_date` date NOT NULL,
+  `delivery_time` varchar(30) NOT NULL,
+  `isConfirmed` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Table structure for table `products`
 --
 
@@ -161,6 +188,23 @@ INSERT INTO `products` (`id`, `main_category_id`, `sub_category_id`, `product_ti
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+-- Table structure for table `store_setting`
+--
+
+CREATE TABLE `store_setting` (
+  `setting_id` int(11) NOT NULL,
+  `minimum_order` float NOT NULL,
+  `minimum_delivery_charge` int(11) NOT NULL,
+  `store_opening_time` varchar(64) NOT NULL,
+  `store_closing_time` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Table structure for table `sub_category`
 --
 
@@ -187,6 +231,36 @@ INSERT INTO `sub_category` (`id`, `main_category_id`, `sub_category_name`, `crea
 (9, 6, 'Ladies Fashion', 1234738800),
 (10, 7, 'Saal', 1234738800);
 
+<<<<<<< HEAD
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `mobile_no` varchar(15) NOT NULL,
+  `password` varchar(16) NOT NULL,
+  `delivery_address` varchar(256) NOT NULL,
+  `account_created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_transaction_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ip_address` varchar(32) NOT NULL,
+  `isActive` tinyint(4) NOT NULL,
+  `acount_type` tinytext NOT NULL COMMENT '2= guest user'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `mobile_no`, `password`, `delivery_address`, `account_created_date`, `last_transaction_date`, `ip_address`, `isActive`, `acount_type`) VALUES
+(1, 'Nazrul Islam', 'nazrul.mailme@gmail.com', '0712121212', '123456', 'Uttara Dhaka', '2016-03-31 14:18:56', '2016-03-31 18:18:56', '', 0, '');
+
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 --
 -- Indexes for dumped tables
 --
@@ -198,18 +272,45 @@ ALTER TABLE `main_category`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`_oid`);
+
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
+-- Indexes for table `store_setting`
+--
+ALTER TABLE `store_setting`
+  ADD PRIMARY KEY (`setting_id`);
+
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Indexes for table `sub_category`
 --
 ALTER TABLE `sub_category`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -219,15 +320,39 @@ ALTER TABLE `sub_category`
 ALTER TABLE `main_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
+<<<<<<< HEAD
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `_oid` int(11) NOT NULL AUTO_INCREMENT;
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
+<<<<<<< HEAD
+-- AUTO_INCREMENT for table `store_setting`
+--
+ALTER TABLE `store_setting`
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- AUTO_INCREMENT for table `sub_category`
 --
 ALTER TABLE `sub_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+<<<<<<< HEAD
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

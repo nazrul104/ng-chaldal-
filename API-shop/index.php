@@ -105,6 +105,7 @@
             </form>
         </div>
         <div class="col-md-6">
+<<<<<<< HEAD
                         <form method="post" action="trigger.php?f=6">
 
                 <h2>Get product by id</h2>
@@ -116,9 +117,102 @@
 
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
+                        <form method="post" action="trigger.php?f=8">
+
+                <h2>User Registration</h2>
+                <div class="form-group">
+                 <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                       <input type="text" name="name" class="form-control" 
+                           placeholder="Name">
+                </div>
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" name="email" class="form-control" 
+                           placeholder="example@gmail.com">
+
+                    <label for="exampleInputEmail1">mobile_no</label>
+                    <input type="tel" name="mobile_no" class="form-control" 
+                           placeholder="Mobile No">
+
+                             <label for="exampleInputEmail1">password</label>
+                    <input type="password" name="password" class="form-control" 
+                           placeholder="Enter valid password">
+
+                             <label for="exampleInputEmail1">Delivery Address</label>
+                    <input type="text" name="delivery_address" class="form-control" 
+                           placeholder="example@gmail.com">    
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+              <form method="post" action="trigger.php?f=9">
+
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" name="email" class="form-control" 
+                           placeholder="example@gmail.com">
+
+                             <label for="exampleInputEmail1">password</label>
+                    <input type="password" name="password" class="form-control" 
+                           placeholder="password">    
+                </div>
+
+                <button type="submit" class="btn btn-default">Login</button>
+            </form>
+
+
+              <form method="post" action="trigger.php?f=9">
+                <h2>Checkout Process</h2>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">User ID#</label>
+                    <input type="text" name="user_id" value="1" class="form-control" 
+                           placeholder="example@gmail.com">
+
+                 <label for="exampleInputEmail1">Total Amount</label>
+                    <input type="text" name="total_amount" class="form-control" 
+                           placeholder="" value="200">    
+
+                     <label for="exampleInputEmail1">Discount Amount</label>
+                    <input type="text" name="discount_amount" class="form-control" 
+                           placeholder="Discount" value="20">    
+
+
+                  <label for="exampleInputEmail1">Grand Total</label>
+                                    <input type="text" name="grand_total" class="form-control" 
+                                           placeholder="" value="180">    
+
+
+                  <label for="exampleInputEmail1">Payment type</label>
+                                    <select name="payment_type" class="form-control" >
+                                      <option value="1">Cash on Delivery</option>
+                                    </select>    
+
+                  <label for="exampleInputEmail1">Delivery Date</label>
+                                    <input type="text" name="delivery_date" class="form-control" 
+                                           placeholder="Delivery date">    
+
+                    <label for="exampleInputEmail1">Delivery Time</label>
+                                    <input type="text" name="delivery_time" class="form-control" 
+                                           placeholder="Delivery time">    
+
+
+                </div>
+
+                <button type="submit" class="btn btn-default">Login</button>
+            </form>
+
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
+
         </div>
     </div>
 </div>
 <?php
+<<<<<<< HEAD
+require("footer.php");
+=======
 require("footere.php");
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 ?>

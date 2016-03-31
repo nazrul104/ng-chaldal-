@@ -37,6 +37,29 @@ header('Access-Control-Allow-Origin: *');
 		  $obj=new API_MOBILE();
 		  $obj->getProductsById(); 
 		break;
+<<<<<<< HEAD
+
+				case 7:
+		  require("api_mobile.php");
+		  $obj=new API_MOBILE();
+		  $obj->availableProducts(); 
+		break;
+
+
+				case 8:
+		  require("users.php");
+		  $obj=new Users();
+		  $obj->Registration(); 
+		break;
+
+		case 9:
+		  require("users.php");
+		  $obj=new Users();
+		  $obj->LoginAuth(); 
+		break;
+
+=======
+>>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 	
 	default:
 		# code...
