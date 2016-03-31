@@ -1,0 +1,70 @@
+                          <acme-navbar obj="hello"></acme-navbar>
+                          <div class="container">
+                              <div class="row">
+                                  
+                                <div class="content-info">
+                                <h2>Select payment method</h2>
+                                                <input type="radio" name="btnstate" ng-model="btnstate" value="1">
+                                                <label>CASH ON DELIVERY</label>
+                                                <br>
+                                                <input type="radio" name="btnstate" ng-model="btnstate" value="2">
+                                                <label>PAYPAL</label>
+                                 
+                                          
+                                  <form id="paypal_frm" action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+    <input name="cmd" value="_cart" type="hidden">               
+    <input name="upload" value="1" type="hidden">
+    <input name="no_note" value="0" type="hidden">
+    <input name="bn" value="PP-BuyNowBF" type="hidden">
+    <input name="tax" value="0" type="hidden">                         
+    <input name="business" type="hidden" value="robinbiz012@gmail.com">
+   
+    <input name="handling_cart" value="0" type="hidden">
+    <input name="cbt" type="hidden" value="Return to The Store">
+    <input name='rm' type='hidden' value='2'>
+    <input name="currency_code" value="GBP" type="hidden">
+    <input name="lc" value="GB" type="hidden">
+    <input name="return" value="<?php echo base_url().'order/orderConfirm'; ?>" type="hidden">
+    <input name = "cancel_return" value = "http://localhost:3000/#/checkout/billing" type = "hidden">
+    <input name = "notify_url" value = "<?php echo base_url().'order/paypal_ipn'; ?>" type = "hidden">
+    <input name="custom" id="custom_value" value="<?php echo $this->session->userdata('paypal_order_id');?>" type="hidden">
+    <input name="item_name_1" type="hidden" value="souces">
+    <input name="amount_1" type="hidden" value="200.00">
+    <input name="quantity_1" value="1" type="hidden">
+    <input name="item_name_2" type="hidden" value="souces">
+    <input name="amount_2" type="hidden" value="200.00">
+    <input name="quantity_2" value="1" type="hidden">
+    <input name="discount_amount_cart" value="2.00" type="hidden">
+
+<!--     <?php
+        $counter = 1;
+        foreach ($this->session->userdata('cart') as $item_list)
+        {
+    ?>
+            <input type="hidden" name="item_name_<?php echo $counter; ?>" value="<?php echo $item_list->item_name; ?>">
+            <input type="hidden" name="amount_<?php echo $counter; ?>" value="<?php echo number_format(($item_list->item_price / $item_list->DishCount), 2) ; ?>">
+            <input name="quantity_<?php echo $counter; ?>" value="<?php echo $item_list->DishCount; ?>" type="hidden">
+    <?php
+        $counter++;
+        }
+        if($this->session->userdata('discount') != 'undefined')
+        {
+    ?>
+            <input name="discount_amount_cart" value="<?php echo number_format($this->session->userdata('discount'), 2, '.', ',');?>" type="hidden">
+    <?php        
+        }
+
+        if($this->session->userdata('delivery_charge') != 0){
+    ?>
+    <input name="shipping_1" value="<?php echo number_format($this->session->userdata('delivery_charge'), 2, '.', ',')?>" type="hidden">
+    <?php
+    }
+    ?> -->
+  
+</form>
+                                  </div>
+                                  <br>
+                                     <a href="" class="checkPageBtn pull-left" ng-click="CheckOutContinue()">CONTINUE</a>     
+                                </div>
+                               </div>
+                          </div>
