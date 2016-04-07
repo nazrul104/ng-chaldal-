@@ -5,11 +5,17 @@
                                 <div class="content-info">
                                 <h2>Select Delivery Timings</h2>
                                  <div class="loginFrom">
-                                     When would you like your Order Items <input type="date" ng-model="delivery_date">  <input type="time" ng-model="delivery_time">
-                                     
+                                     When would you like your Order Items 
+                                     <input type="date" ng-model="vm.delivery_date"> <br>
+                                      <select ng-model="vm.delivery_time">
+                                          <option value="">Select Time</option>
+                                          <option value="7:00 AM - 12:00 PM">7:00 AM - 12:00 PM</option> 
+                                          <option value="3:00 PM - 9:00 PM">3:00 PM - 9:00 PM</option> 
+                                     </select>
                                   </div>
                                   <br>
-                                     <a href="/#/checkout/billing" class="checkPageBtn pull-left" ng-click="CheckOutContinue()">CONTINUE</a>     
+                                   <!--   <a href="/#/checkout/billing" class="checkPageBtn pull-left" ng-click="CheckOutContinue()">CONTINUE</a>      -->
+                                    <input type="button" class="checkPageBtn pull-left" value="CONTINUE" ng-click="vm.step2_SelectDeliveryTimings()">
                                 </div>
                                </div>
                           </div>

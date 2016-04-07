@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'app/components/category/category.html',
       scope: {
-          obj: '@',
+          obj: '@'
       },
       controller: CategoryController,
       controllerAs: 'vm',
@@ -22,13 +22,12 @@
 
     /** @ngInject */
     function CategoryController(moment,$scope,$http,datasource) {
+            var vm = this;
               $http.get(datasource+'?f=5')
           .success(function(data) {
-           $scope.categories =data;  
+           vm.categories =data;  
          });
-      var vm = this;
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
     }
   }

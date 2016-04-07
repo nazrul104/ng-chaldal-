@@ -3,42 +3,44 @@
 
   angular
     .module('angular')
-    .factory('basket', function () {
-      var items =10;
+    .factory('basket', function ($window) {
+     
       var cartData={"OrderList":[]};
+      var isLogged = false;
+      var logged_Id = 0;
       return {
         setCartData:function(data)
         {
          
-          if(window.localStorage.getItem("cdata")!=null)
+          if($window.localStorage.getItem("cdata")!=null)
           {
-               cartData =JSON.parse(window.localStorage.getItem("cdata"));
+               cartData =angular.fromJson($window.localStorage.getItem("cdata"));
                cartData.OrderList.push(data);
-               window.localStorage.setItem("cdata",JSON.stringify(cartData));
+               $window.localStorage.setItem("cdata",angular.toJson(cartData));
           }else
           {
 
                cartData.OrderList.push(data);
               
-               window.localStorage.setItem("cdata",JSON.stringify(cartData));
+               $window.localStorage.setItem("cdata",angular.toJson(cartData));
           }
         },
         getCartData:function()
         {
-            cartData =window.localStorage.getItem("cdata");
+            cartData =$window.localStorage.getItem("cdata");
            return cartData;
         },
         updateCartdata:function(i,data)
         {
-            cartData =JSON.parse(window.localStorage.getItem("cdata"));
+            cartData =angular.fromJson($window.localStorage.getItem("cdata"));
             cartData.OrderList[i]=data;
-            window.localStorage.setItem("cdata",JSON.stringify(cartData));
+            $window.localStorage.setItem("cdata",angular.toJson(cartData));
         },
          cartTotalAmount:function()
         {
             var total=0.00;
-            cartData =JSON.parse(window.localStorage.getItem("cdata"));
-             cartData.OrderList.forEach(function(e, i)
+            cartData =angular.fromJson($window.localStorage.getItem("cdata"));
+             cartData.OrderList.forEach(function(e)
             {
                 total=total+(parseFloat(e.item_price)*e.item_unit);
             });
@@ -47,13 +49,26 @@
           cartDataCounter:function()
         {
               var t=0;
-             cartData =JSON.parse(window.localStorage.getItem("cdata"));
-            cartData.OrderList.forEach(function(e, i)
+             cartData =angular.fromJson($window.localStorage.getItem("cdata"));
+            cartData.OrderList.forEach(function(e)
             {
             t=t+e.item_unit;
             });
           
            return t;
+        },
+        setSession:function(user_id)
+        {
+          isLogged = true;
+          logged_Id = user_id;
+        },
+        getSession:function()
+        {
+          return isLogged;
+        },
+        getUserId:function()
+        {
+          return logged_Id;
         }
       };
     })

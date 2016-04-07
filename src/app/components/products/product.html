@@ -22,10 +22,10 @@
                 </div>
                 <div class="col-lg-2 col-md-3 hidden-sm col-xs-12">
                     <div class="shopping-cart expand">
-                        <a href="/#/shopping_cart"><span>Shopping Cart ({{total_item}})</i></span></a>
+                        <a href="/#/login"><span>Shopping Cart ({{vm.total_item}})</i></span></a>
                         <div class="restrain small-cart-content">
                             <ul class="cart-list">
-                                <li ng-repeat="cdata in cartdata.OrderList">
+                                <li ng-repeat="cdata in vm.cartdata.OrderList">
                                 <!--     <a class="sm-cart-product" href="product-details.html">
                                         <img src="assets/img/product/sscart-1.jpg" alt="">
                                     </a> -->
@@ -48,7 +48,7 @@
                                     </div>
                                 </li> -->
                             </ul>
-                            <p class="total">Subtotal: <span class="amount">&pound; {{total_amount | number:2}}</span></p>
+                            <p class="total">Subtotal: <span class="amount">&pound; {{vm.total_amount | number:2}}</span></p>
                             <p class="buttons">
                                 <a href="checkout.html" class="button">Checkout</a>
                             </p>
@@ -58,7 +58,7 @@
             </div>
         </div>
 </div>
-                                         <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd"  ng-repeat="product in searcheddata.products_list | filter:searchText">
+                                         <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd"  ng-repeat="product in vm.searcheddata.products_list | filter:searchText">
                                                 <div class="single-product">
                                                     <div class="product-label">
                                                     <div class="new"></div>
@@ -84,7 +84,7 @@
                                                     </div>
                                                     <div class="add-to-link3">
                                                         <ul>
-                                                            <li class="add-link3"><a title="" ng-click = "AddItemIntoCart(product.product_id,product.product_title,product.product_price)" data-original-title="Add to Cart">add to cart</a></li>
+                                                            <li class="add-link3"><a title="" ng-click = "vm.AddItemIntoCart(product.product_id,product.product_title,product.product_price)" data-original-title="Add to Cart">add to cart</a></li>
                                                             <li class="add-heart"><a href="#" title="" data-original-title="Add to Wishlist"></a></li>
                                                             <li class="add-arrow"><a href="#" title="" data-original-title="View Products"></a></li>
                                                         </ul>

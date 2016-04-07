@@ -6,7 +6,7 @@
       .service('webDevTec', webDevTec);
 
   /** @ngInject */
-  function webDevTec($http) {
+  function webDevTec() {
     var apiurl =""
     var data = [
      { 

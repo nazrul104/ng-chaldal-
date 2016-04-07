@@ -11,20 +11,16 @@
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          obj: '@',
+          obj: '='
       },
       controller: NavbarController,
       controllerAs: 'vm',
       bindToController: true
     };
-
     return directive;
-
     /** @ngInject */
-    function NavbarController(moment,$scope,basket) {
+    function NavbarController(moment) {
       var vm = this;
-      $scope. myname =$scope.obj;
-      // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
     }
   }

@@ -6,24 +6,23 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr,$scope,$stateParams,$http,datasource,basket) {
+  function MainController($timeout, webDevTec, toastr,$stateParams,$http,datasource) {
     var vm = this;
     vm.classAnimation = '';
     vm.creationDate = 1457873297619;
     vm.showToastr = showToastr;
-    $scope.selectedCategory = {"cid":"","category_name":"all"};
     activate();
     function activate()
      {
 
         $http.get(datasource+'?f=5')
           .success(function(data) {
-           $scope.categories =data;  
+           vm.categories =data;  
          });
 
           $http.get(datasource+'?f=7')
           .success(function(data) {
-           $scope.data =data;  
+           vm.data =data;  
          });
 
       $timeout(function() {
@@ -39,12 +38,13 @@
 
     if ($stateParams.cid)
      {
-      $scope.category_id = $stateParams.cid;
-      $scope.lookingfor = $stateParams.cname;
-      $scope.searcheddata = [];
-      $scope.selectedCategory = {"cid":$stateParams.cid,"category_name":$stateParams.cname};
+
+      vm.category_id = $stateParams.cid;
+      vm.lookingfor = $stateParams.cname;
+      vm.searcheddata = [];
+      vm.selectedCategory = {"cid":$stateParams.cid,"category_name":$stateParams.cname};
     }
 
-    $scope.cart_total =  10;
+    vm.cart_total =  10;
   }
 })();

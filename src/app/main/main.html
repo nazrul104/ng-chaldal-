@@ -20,12 +20,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12 nopadding-left">
                 <div class="ambit-key">
                     <!-- product section start -->
-                    <div class="our-product-area top-pd featur-padd" ng-if="searcheddata">         
+                    <div class="our-product-area top-pd featur-padd" ng-if="vm.searcheddata">         
                         <!--====== best offered area start===== -->
                     <div class="our-product-area best-offere featur-padd mt25">
                         <!-- area title start -->
                         <div class="area-title bdr2">
-                            <h2>Looking for: <strong>{{lookingfor}}</strong> items </h2>
+                            <h2>Looking for: <strong>{{vm.lookingfor}}</strong> items </h2>
                         </div>
                         <!-- area title end -->
                         <!-- our-product area start -->
@@ -41,7 +41,7 @@
                                     <div class="feature-carousel-tab">
                                   
                                             <!-- single-product start -->
-                                            <product-list obj="selectedCategory"></product-list>
+                                            <product-list obj="vm.selectedCategory"></product-list>
 
                             </div>
                             </div>
@@ -93,7 +93,7 @@
                                     <div class="feature-carousel-tab">
 
                                             <!-- single-product start -->
-                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd"  ng-repeat="product in data.products_list">
+                                            <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 col-padd"  ng-repeat="product in vm.data.products_list">
                                                 <div class="single-product">
                                                     <div class="product-label">
                                                     <div class="new"></div>

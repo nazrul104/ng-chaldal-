@@ -4,14 +4,14 @@
                                   
                                 <div class="content-info">
                                 <h2>Select payment method</h2>
-                                                <input type="radio" name="btnstate" ng-model="btnstate" value="1">
+                                                <input type="radio" name="btnstate" ng-model="payment_type"  ng-click="step3_selectPaymentMethod(1)">
                                                 <label>CASH ON DELIVERY</label>
                                                 <br>
-                                                <input type="radio" name="btnstate" ng-model="btnstate" value="2">
-                                                <label>PAYPAL</label>
+                                              <!--   <input type="radio" name="btnstate" ng-model="btnstate" value="2">
+                                                <label>PAYPAL</label> -->
                                  
                                           
-                                  <form id="paypal_frm" action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+ <form id="paypal_frm" action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
     <input name="cmd" value="_cart" type="hidden">               
     <input name="upload" value="1" type="hidden">
     <input name="no_note" value="0" type="hidden">
@@ -64,7 +64,7 @@
 </form>
                                   </div>
                                   <br>
-                                     <a href="" class="checkPageBtn pull-left" ng-click="CheckOutContinue()">CONTINUE</a>     
+                                     <a  class="checkPageBtn pull-left" ng-click="vm.submitOrder()">Submit</a>     
                                 </div>
                                </div>
                           </div>
