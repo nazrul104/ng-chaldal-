@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
-<<<<<<< HEAD
--- Generation Time: Mar 31, 2016 at 05:31 PM
-=======
--- Generation Time: Mar 21, 2016 at 03:45 PM
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
+-- Generation Time: Apr 07, 2016 at 05:34 PM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -53,7 +49,6 @@ INSERT INTO `main_category` (`id`, `category_name`, `created_date`) VALUES
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Table structure for table `orders`
 --
 
@@ -66,16 +61,34 @@ CREATE TABLE `orders` (
   `payment_type` tinyint(4) NOT NULL,
   `payment_status` tinyint(4) NOT NULL,
   `special_instruction` varchar(256) NOT NULL,
-  `delivery_date` date NOT NULL,
-  `delivery_time` varchar(30) NOT NULL,
+  `delivery_date` int(11) NOT NULL,
+  `delivery_address` varchar(256) NOT NULL,
+  `delivery_time` int(11) NOT NULL,
+  `json_items` text NOT NULL,
   `isConfirmed` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`_oid`, `user_id`, `total_amount`, `discount_amount`, `grand_total`, `payment_type`, `payment_status`, `special_instruction`, `delivery_date`, `delivery_address`, `delivery_time`, `json_items`, `isConfirmed`) VALUES
+(1, 1, 100, 20, 80, 1, 1, 'test order', 20160403, '', 10, '', '10:00 PM'),
+(2, 1, 100, 20, 80, 1, 1, 'test order', 20160403, '', 10, '', '10:00 PM'),
+(3, 1, 100, 20, 80, 1, 1, 'test order', 20160403, '', 10, '', '10:00 PM'),
+(4, 1, 100, 20, 80, 1, 1, 'test order', 20160403, '', 10, '', '10:00 PM'),
+(5, 1, 35450, 0, 35450, 0, 1, 'test order', 0, '', 0, '', 'Thu Jan 01 1970 23:22:00 GMT+0600 (DACT)'),
+(6, 1, 35450, 0, 35450, 1, 1, 'test order', 0, '', 0, '', 'Thu Jan 01 1970 12:00:00 GMT+0600 (DACT)'),
+(7, 1, 35450, 0, 35450, 1, 1, 'test order', 1459706400, '', 28800, '', '1'),
+(8, 1, 35450, 0, 35450, 1, 1, 'test order', 1460311200, '', 41580, '', '1'),
+(9, 1, 35450, 0, 35450, 1, 1, 'test order', 1459706400, '', 61200, '', '1'),
+(10, 1, 51250, 0, 51250, 1, 1, 'test order', 1459965600, '', 0, '', '1'),
+(11, 1, 51250, 0, 51250, 1, 1, 'test order', 1459965600, 'House#33,Road#05,Sector:10, Uttara Dhaka', 0, '', '1'),
+(12, 1, 51250, 0, 51250, 1, 1, 'test order', 1459965600, 'House#33,Road#05,Sector:10, Uttara Dhaka', 0, '{"OrderList":[{"item_id":"70","item_name":"sultan indian panjabi","item_price":"1550","item_unit":4},{"item_id":"69","item_name":"stylish jents panjabi","item_price":"1399","item_unit":2},{"item_id":"68","item_name":"short panjabi","item_price":"850","item_unit":1},{"item_id":"4","item_name":"Bangla Special","item_price":"955","item_unit":1},{"item_id":"5","item_name":"Bangla Special","item_price":"799","item_unit":1},{"item_id":"6","item_name":"Jamdani aplic","item_price":"3899","item_unit":1},{"item_id":"7","item_name":"Aplic butic shari","item_price":"1899","item_unit":1},{"item_id":"31","item_name":"ladies long shirt","item_price":"1250","item_unit":3},{"item_id":"33","item_name":"kashmiri saal","item_price":"4850","item_unit":5},{"item_id":"10","item_name":"Forever love","item_price":"250","item_unit":1},{"item_id":"2","item_name":"Full slive","item_price":"750","item_unit":2},{"item_id":"17","item_name":"Pure silk sharri","item_price":"3650","item_unit":1},{"item_id":"11","item_name":"Ferrari replica","item_price":"450","item_unit":1}]}', '1');
 
 -- --------------------------------------------------------
 
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Table structure for table `products`
 --
 
@@ -188,7 +201,6 @@ INSERT INTO `products` (`id`, `main_category_id`, `sub_category_id`, `product_ti
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Table structure for table `store_setting`
 --
 
@@ -203,8 +215,6 @@ CREATE TABLE `store_setting` (
 -- --------------------------------------------------------
 
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Table structure for table `sub_category`
 --
 
@@ -231,7 +241,6 @@ INSERT INTO `sub_category` (`id`, `main_category_id`, `sub_category_name`, `crea
 (9, 6, 'Ladies Fashion', 1234738800),
 (10, 7, 'Saal', 1234738800);
 
-<<<<<<< HEAD
 -- --------------------------------------------------------
 
 --
@@ -259,8 +268,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `mobile_no`, `password`, `delivery_address`, `account_created_date`, `last_transaction_date`, `ip_address`, `isActive`, `acount_type`) VALUES
 (1, 'Nazrul Islam', 'nazrul.mailme@gmail.com', '0712121212', '123456', 'Uttara Dhaka', '2016-03-31 14:18:56', '2016-03-31 18:18:56', '', 0, '');
 
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 --
 -- Indexes for dumped tables
 --
@@ -272,45 +279,36 @@ ALTER TABLE `main_category`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`_oid`);
 
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
 -- Indexes for table `store_setting`
 --
 ALTER TABLE `store_setting`
   ADD PRIMARY KEY (`setting_id`);
 
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- Indexes for table `sub_category`
 --
 ALTER TABLE `sub_category`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -320,39 +318,30 @@ ALTER TABLE `users`
 ALTER TABLE `main_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
-<<<<<<< HEAD
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `_oid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `_oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
-<<<<<<< HEAD
 -- AUTO_INCREMENT for table `store_setting`
 --
 ALTER TABLE `store_setting`
   MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT;
 --
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 -- AUTO_INCREMENT for table `sub_category`
 --
 ALTER TABLE `sub_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-<<<<<<< HEAD
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-=======
->>>>>>> 794553664befbb90f7ac50e7806f7e7b99af76ea
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
