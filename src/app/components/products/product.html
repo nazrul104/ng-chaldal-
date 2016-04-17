@@ -1,60 +1,43 @@
+<!-- start product cart section -->
+    <div class="ui-shopping-cart">
+
+        <div class="ui-small-cart-content">
+          <table class="table-striped">
+              <thead>
+                  <th>  Name  </th>
+              </thead>
+          </table>
+          <ul class="cart-list">
+              <li ng-repeat="cdata in vm.cartdata.OrderList">
+              <!--     <a class="sm-cart-product" href="product-details.html">
+                      <img src="assets/img/product/sscart-1.jpg" alt="">
+                  </a> -->
+                  <div class="small-cart-detail">
+                      <a class="remove" href="#"><i class="fa fa-times-circle-o"></i></a>
+                     <!--  <a href="#" class="edit-btn"><img src="img/btn_edit.gif" alt="Edit Button"></a> -->
+                      <a class="small-cart-name" href="product-details.html">{{cdata.item_name}}</a>
+                      <span class="quantitys"><strong>{{cdata.item_unit}}</strong>x<span>{{cdata.item_unit*cdata.item_price}}</span></span>
+                  </div>
+              </li>
+          </ul>
+          <p class="total">Subtotal: <span class="amount">&pound; {{vm.total_amount | number:2}}</span></p>
+          <p class="buttons">
+              <a href="checkout.html" class="button">Checkout</a>
+          </p>
+            <p class="total">Subtotal: <span class="amount">$155.00</span></p>
+            <div class="ui-checkout-buttons">
+                <input type="button" value="Chekout">
+
+            </div>
+        </div>
+    </div>
+    <!-- end product cart section -->
             <div class="header-menu">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="logo-area">
-                        <a href="index-3.html"><img src="assets/img/logo_home3.png" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-6 col-sm-9 col-xs-12">
-                    <div class="block-header">
-                        <div class="phone"><i class="fa fa-phone"></i>(+880) 175 699 7996</div>
-                        <div class="email"><a href="mailto:admin@bootexperts.com"><i class="fa fa-envelope-o"></i>Support@<span>example.com</span></a></div>
-                    </div>
-                    <div class="search-categori">
-                        <div class="search-box">
-                            <form action="#">
-                                <input type="text" class="form-control input-sm" ng-model="searchText" maxlength="64" placeholder="Enter your search key ... ">
-                                <button type="submit">Search</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 hidden-sm col-xs-12">
-                    <div class="shopping-cart expand">
-                        <a href="/#/login"><span>Shopping Cart ({{vm.total_item}})</i></span></a>
-                        <div class="restrain small-cart-content">
-                            <ul class="cart-list">
-                                <li ng-repeat="cdata in vm.cartdata.OrderList">
-                                <!--     <a class="sm-cart-product" href="product-details.html">
-                                        <img src="assets/img/product/sscart-1.jpg" alt="">
-                                    </a> -->
-                                    <div class="small-cart-detail">
-                                        <a class="remove" href="#"><i class="fa fa-times-circle-o"></i></a>
-                                       <!--  <a href="#" class="edit-btn"><img src="img/btn_edit.gif" alt="Edit Button"></a> -->
-                                        <a class="small-cart-name" href="product-details.html">{{cdata.item_name}}</a>
-                                        <span class="quantitys"><strong>{{cdata.item_unit}}</strong>x<span>{{cdata.item_unit*cdata.item_price}}</span></span>
-                                    </div>
-                                </li>
-               <!--                  <li>
-                                    <a class="sm-cart-product" href="product-details.html">
-                                        <img src="assets/img/product/sscart-2.jpg" alt="">
-                                    </a>
-                                    <div class="small-cart-detail">
-                                        <a class="remove" href="#"><i class="fa fa-times-circle-o"></i></a>
-                                        <a href="#" class="edit-btn"><img src="img/btn_edit.gif" alt="Edit Button"></a>
-                                        <a class="small-cart-name" href="product-details.html">Donec ac tempus</a>
-                                        <span class="quantitys"><strong>1</strong>x<span>$40.00</span></span>
-                                    </div>
-                                </li> -->
-                            </ul>
-                            <p class="total">Subtotal: <span class="amount">&pound; {{vm.total_amount | number:2}}</span></p>
-                            <p class="buttons">
-                                <a href="checkout.html" class="button">Checkout</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
+
+
             </div>
         </div>
 </div>

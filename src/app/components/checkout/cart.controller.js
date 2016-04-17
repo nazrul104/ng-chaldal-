@@ -79,7 +79,7 @@ vm.step3_selectPaymentMethod = function(p)
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
         });
         request.success(function (data) {
-       
+       console.log(data);
           if (data.status=="success") 
           {
              toastr.success("Your order has been successfully saved!<br> We will shortly contact with you");    

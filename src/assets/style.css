@@ -9,15 +9,15 @@
 
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
     1. Theme Default CSS (body, link color, section etc)
-    2. header 
+    2. header
 		2.1 header top
-		2.2 header bottom 
+		2.2 header bottom
 		2.3 header bottom
-    3. slider area css 
+    3. slider area css
     4. creative banner area
     5. category menu CSS
     6.  Our Product area CSS (1111)
@@ -50,7 +50,7 @@
     24. about page(3950)
     25. Contact-page (4098)
     26. 404-page (4167)
-	
+
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
@@ -790,7 +790,7 @@ span.amount {
     transition: .3s;
 }
 /*----------------------------------------*/
-/*  3. slider area css 
+/*  3. slider area css
 /*----------------------------------------*/
 .slider-area .nivo-caption .layer-1 img {
     width: 26%;
@@ -4180,3 +4180,37 @@ form textarea:focus {
 .home-3-wraper aside{
     margin-top: 0px;
 }
+/* ------------- custom css for main layout ----------------*/
+.ui-shopping-cart {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    position: fixed;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+    top: 48px;
+    height:615px;
+    overflow-y: auto;
+}
+.left-category-menu {
+    margin-top: 0px;
+    position: fixed;
+    left: 0;
+    width: 282px;
+    top: 48px;
+    height: 615px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.home-3-wraper .main-area {
+    background: #fff none repeat scroll 0 0;
+    padding-top: 20px;
+}
+.header-area {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+/*---------- end custom css for main layout ------------*/

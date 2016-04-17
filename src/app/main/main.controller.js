@@ -17,17 +17,18 @@
 
         $http.get(datasource+'?f=5')
           .success(function(data) {
-           vm.categories =data;  
+           vm.categories =data;
          });
 
           $http.get(datasource+'?f=7')
           .success(function(data) {
-           vm.data =data;  
+           vm.data =data;
          });
 
       $timeout(function() {
         vm.classAnimation = 'rubberBand';
       }, 4000);
+
 
     }
 
